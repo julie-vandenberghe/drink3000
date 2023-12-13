@@ -1,5 +1,5 @@
 @use "_reset.scss";
-
+@use "variables" as v;
 
 header {
     width: 100%;
@@ -9,6 +9,59 @@ header {
         }
 }
 
+body {
+    font-family: "Titillium Web", sans-serif;
+}
 section#recipes {
-    height:500px;
+
+    //CARDS DRINK
+    .drink.original {
+        background-color: v.$color-original;
+    }
+    .drink.pinktonic {
+        background-color: v.$color-pinktonic;
+    }
+    .drink.mojito {
+        background-color: v.$color-mojito;
+    }
+    .drink.tropical {
+        background-color: v.$color-tropical;
+    }
+    .drink {
+        color:white;
+        padding:10px 20px;
+        margin:20px;
+        border-radius: 10px;
+        
+        .title {
+            border-bottom: 1px solid white;
+            font-size: 3rem;
+            margin:0;
+        }
+
+        .text {
+            padding:10px 0;
+        }
+    }
+    .categoryIcon img {
+        width: 20px;
+    }
+
+    //BUTTONS
+    .buttons button {
+        //opacity: 10%;
+        background-color:v.$color-pinktonic;
+        margin-top:10px;
+        //border:none;
+        color:white;
+    }
+    .moreInfo {
+        border-radius: 10px;
+    }
+}
+
+.container {
+    display:flex;
+    align-items: baseline;
+    justify-content:space-between;
 }

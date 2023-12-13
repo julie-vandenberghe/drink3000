@@ -1,0 +1,14 @@
+@use "_reset.scss";
+
+
+header {
+    width: 100%;
+    
+        video {
+            background-size: cover;
+        }
+}
+
+section#recipes {
+    height:500px;
+}

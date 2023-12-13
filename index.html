@@ -9,16 +9,92 @@
 <body>
 
     <header>
-     
+        
+     <video autoplay loop muted src="./vid/mp4/Pour.mp4"></video>
+
+     <div class="text-overlay">
+        <h1>Découvrez nos boissons énergisantes&nbsp;!</h1>
+     </div>
+
     </header>
 
     <main>
+        <section id="recipes">
+                <h2>Nos recettes </h2>
+            <div>
+                <div>
+                    Original
+                </div>
+                <div>
+                    Mojito  
+                </div>
+                <div>
+                    Tropical
+                </div>
+            </div>
 
+            <div>
+                
+            </div>
+        </section>    
+        <section id="references">
+            <h2>Nos références</h2>
+                <div>
+                    <h3>Cafés, hôtels, restaurants</h3>
+                </div>
+                <div>
+                    <h3>Marques</h3>
+                </div>
+                <div>
+                    <h3>Associations, écoles</h3>
+                </div>
+                <div>Toutes les marques commerciales déposées ou non déposées citées dans ce document sont la propriété exclusive de leurs détenteurs respectifs</div>
+                <div>
+                    <h3>Publicités par l'objet</h3>
+                </div>
+                
+
+        
+        </section>
+        <section id="carrousel">
+            <div>
+                <h3>Garanties 100% fraîcheur</h3>
+                <p>Nous garantissons votre satisfaction lors de la dégustation de nos boissons</p>
+            </div>
+        </section>
     </main>
 
 
     <footer>
-        
+        <div class="contact">
+            <h2>Nous contacter</h2>
+            <form action="" method="post">
+                <div>
+                    <label for="inputEmail">E-mail</label>
+                    <input type="email" id="inputEmail" required />
+                </div>
+                <div>
+                    <label for="selectObject">Objet de la demande</label>
+                    <select name="selectObject" id="selectObject" required>
+                        <option value="particulier">Particulier</option>
+                        <option value="entreprise">Entreprise</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="textMessage">Votre demande</label>
+                    <textarea id="textMessage" cols="10" rows="4"
+                        placeholder="Saisissez ici votre message."></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Envoyer" />
+                </div>
+
+            </form>
+        </div>
+        <div class="map">
+            <h2>Où sommes-nous ?</h2>
+            <iframe></iframe>
+        </div>
     </footer>
     
 </body>

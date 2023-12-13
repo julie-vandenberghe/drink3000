@@ -1,14 +1,144 @@
 @use "_reset.scss";
 
-
 header {
+    position: relative;
     width: 100%;
-    
-        video {
-            background-size: cover;
-        }
+    display: flex;
+    height: 100vh;
+
+            video {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                z-index: -2;
+            }
+
+            .text-overlay {
+                color: white;
+                display: flex;
+                justify-content:center;
+                font-size: 75px;
+                gap: 1%;
+                height: 200px;
+                align-items: center;
+          
+            }
+
+            .text-overlay1 {
+                color: white;
+                display: flex;
+                justify-content:center;
+                font-size: 75px;
+                gap: 1%;
+                align-items: center;
+                height: 50%;
+              
+            }
+
+         
 }
 
+
+.div-text-overlay {
+    width: 100%;
+    height: 100%;
+    
+}
+    
 section#recipes {
     height:500px;
+}
+
+.fa-solid{
+   color: white;
+}
+
+#references {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.references-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex {
+    display: flex;
+}
+
+.div-references {
+    width: 30%;
+  justify-content: center;
+    display: flex;
+
+    h3 {
+        width: 35%;
+        text-transform: uppercase;
+    }
+    
+}
+
+.div-references1 {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+
+    h3 {
+        width: 10%;
+        text-transform: uppercase;
+    }
+    
+}
+
+.text {
+    margin: 20px;
+    width: 40%;
+}
+
+.referenceTitle {
+text-align: center;
+font-size: 35px;
+text-transform: uppercase;
+}
+
+
+
+
+img {
+    width: 30%;
+}
+
+.img1 {
+    width: 10%;
+}
+
+#carrousel {
+  width: 100%;
+
+  .carousel-container {
+    max-width: 800px;
+    margin: auto;
+
+    .carousel-item {
+      position: relative;
+      text-align: center;
+
+      
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }

@@ -12,7 +12,127 @@ body {
   margin: 0;
 }
 
-header {
+
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+header video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+header .text-overlay {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 75px;
+  gap: 1%;
+  height: 200px;
+  align-items: center;
+}
+header .text-overlay1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 75px;
+  gap: 1%;
+  align-items: center;
+  height: 50%;
+}
+
+.div-text-overlay {
+  width: 100%;
+  height: 100%;
+}
+
+section#recipes {
+  height: 500px;
+}
+
+.fa-solid {
+  color: white;
+}
+
+#references {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.references-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex {
+  display: flex;
+}
+
+.div-references {
+  width: 30%;
+  justify-content: center;
+  display: flex;
+}
+.div-references h3 {
+  width: 35%;
+  text-transform: uppercase;
+}
+
+.div-references1 {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+.div-references1 h3 {
+  width: 10%;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 20px;
+  width: 40%;
+}
+
+.referenceTitle {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 30%;
+}
+
+.img1 {
+  width: 10%;
+}
+
+#carrousel {
+  width: 100%;
+}
+#carrousel .carousel-container {
+  max-width: 800px;
+  margin: auto;
+}
+#carrousel .carousel-container .carousel-item {
+  position: relative;
+  text-align: center;
+}
+#carrousel .carousel-container .carousel-item img {
+  width: 100%;
+  height: auto;
+=======
   width: 100%;
 }
 header video {

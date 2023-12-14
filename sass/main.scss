@@ -5,7 +5,7 @@ header {
     position: relative;
     width: 100%;
     display: flex;
-    height: 100vh;
+    height:100vh;
 
             video {
                 width: 100%;
@@ -41,6 +41,29 @@ header {
 
          
 }
+
+
+
+#arrow{
+    width: 100%;
+    text-align: center;
+    font-size: 300%;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 50%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+        transform: translateY(0); 
+      }
+  }
 
 
 .div-text-overlay {
@@ -120,26 +143,7 @@ img {
     width: 10%;
 }
 
-#carrousel {
-  width: 100%;
 
-  .carousel-container {
-    max-width: 800px;
-    margin: auto;
-
-    .carousel-item {
-      position: relative;
-      text-align: center;
-
-      
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-}
 
 body {
     font-family: "Titillium Web", sans-serif;
@@ -215,4 +219,81 @@ section#recipes {
     display:flex;
     align-items: baseline;
     justify-content:space-between;
+}
+
+
+footer {
+
+    background-color: gray;
+    color: white;
+
+.contact {
+    
+        position: relative;
+        display: flex;
+       
+        align-items: flex-end;
+
+        .form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            
+
+
+            #formulaire {
+                width: 100%;
+                font-size: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+               
+                   
+            }
+        }
+
+
+        .request {
+            height: 40px;
+           
+            border-radius: 5px;
+        }
+
+        .map{
+            flex-direction: column;
+          
+            display: flex;
+           
+            width: 40%;
+
+            #map {
+                width: 100%;
+               
+            }
+        }
+        
+    }
+
+    h3 {
+        font-size: 150%;
+        text-align: center;
+    }
+}
+
+.input-size {
+    width: 40%;
+}
+
+.placement {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    
+}
+
+#submit {
+    background-color: gray;
+    border: none;
+    color: white;
 }

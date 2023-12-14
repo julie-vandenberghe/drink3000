@@ -12,6 +12,14 @@ header {
 body {
     font-family: "Titillium Web", sans-serif;
 }
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+//---------------
+//SECTION RECIPES
 section#recipes {
 
     //CARDS DRINK
@@ -37,6 +45,7 @@ section#recipes {
             border-bottom: 1px solid white;
             font-size: 3rem;
             margin:0;
+            
         }
 
         .text {
@@ -50,13 +59,23 @@ section#recipes {
     //BUTTONS
     .buttons button {
         //opacity: 10%;
-        background-color:v.$color-pinktonic;
+        background-color:transparent;
+        border: none;
+        outline: none;
         margin-top:10px;
-        //border:none;
         color:white;
+        text-transform: uppercase;
     }
-    .moreInfo {
-        border-radius: 10px;
+    button.moreInfo {
+        border-radius: 30px;
+        background-color:rgba(0, 0, 0, 0.25);
+        padding: 5px 10px;
+    }
+
+    //DRINK SELECTED
+    .drinkSelected {
+        background-color: v.$color-drinkselected;
+        text-align:center;
     }
 }
 

@@ -297,3 +297,27 @@ footer {
     border: none;
     color: white;
 }
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20%;
+    
+
+    li button {
+        
+            background-color: v.$color-drinkselected;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 120%;
+            padding: 10px;
+            border: none;
+        
+    }
+}

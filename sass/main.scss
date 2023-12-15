@@ -107,8 +107,6 @@ h2 {
     }
 }
 
-
-
     .references-container {
 
         display: flex;
@@ -339,10 +337,21 @@ section#recipes {
 #recipes ul {
     list-style: none;
     display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 20%;
-    
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0; //Pour reset par défaut la marge sur les ul
+    padding: 0; //Pour reset par défaut la marge sur les ul
+
+    @media screen and (min-width: v.$md-breakpoint) {       
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 20%;
+    }
+    li {
+        margin-top:20px;
+    }
 
     li button {
         

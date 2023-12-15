@@ -8,7 +8,7 @@ header {
     text-transform: uppercase;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1; // pour que la navbar passe au-dessus de tous les textes de la page
+    z-index: 100; // pour que la navbar passe au-dessus de tous les textes de la page
     width: 100%;
     // pour que la navbar soit sticky :
     position: fixed;

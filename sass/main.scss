@@ -15,6 +15,30 @@ h2 {
 //---------------
 //HEADER
 header {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    .logo {
+        color:gray;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 0 5px;
+        color:white;
+    }
+    a, a:hover, a:focus, a:visited {
+        text-decoration: none;
+        color:white;
+    }
+
+}
+
+
+//---------------
+//SECTION BANNER
+#banner {
     position: relative;
     width: 100%;
     display: flex;
@@ -84,7 +108,7 @@ header {
     
 }  
 
-.fa-solid{
+#banner .fa-solid{
    color: white;
 }
 
@@ -307,7 +331,7 @@ footer {
     display: none;
 }
 
-ul {
+#recipes ul {
     list-style: none;
     display: flex;
     width: 100%;

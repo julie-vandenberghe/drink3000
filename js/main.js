@@ -4,7 +4,7 @@ let btnSelect = document.querySelectorAll("button.select"); //On récupère tous
 let numBtnSlct = btnSelect.length; // Longueur du tableau avec tous les <button>
 
 // On met un écouteur d'event sur tous les boutons sélectionner 
-for (var i = 0; i < numBtnSlct; i++) { //Boucle afin d'ajouter un eventListener
+for (let i = 0; i < numBtnSlct; i++) { //Boucle afin d'ajouter un eventListener
     btnSelect[i].addEventListener('click', (e => { //Sur le <btn> où on a cliqué
         let parent = e.target.parentNode.parentNode; //On récupère le noeud parent (div) du <btn> cliqué
         let drinkTitle = parent.querySelector('h3').textContent; //On récupère le titre de la boisson (pourquoi .value ne fonctionne pas ici ?)
@@ -62,17 +62,31 @@ for (var i = 0; i < numBtnSlct; i++) { //Boucle afin d'ajouter un eventListener
 //-----------------------
 // NAVBAR
 // Affichage de la navbar au scroll
-var navbar = document.getElementById("navbar"); // On récupère la navbar dans le html
-var sticky = navbar.offsetTop;
-var initScrollpos = 0; // On déclare la position sans scroll (Y = 0)
+let navbar = document.getElementById("navbar"); // On récupère la navbar dans le html
+let initScrollpos = 0; // On déclare la position sans scroll (Y = 0)
 window.onscroll = function() { // Instructions lors du scroll 
-    var currentScrollPos = window.scrollY; // On récupère la position Y
+    let currentScrollPos = window.scrollY; // On récupère la position Y
     if (initScrollpos < currentScrollPos) { // Si le Y est plus grand que 0 (c'est-à-dire position sans scroll)
         navbar.classList.remove("hidden"); // On supprime la class "hidden" pour afficher la navbar
     } else { // Sinon (Si y = 0, donc s'il n'y a pas de scroll)
         navbar.classList.add("hidden");  //On rajoute la class "hidden" pour cacher la navbar
 }
 }
-//
+
+// Affichage du menu déroulant sur le burger menu
+let btnBurger = document.querySelector("button.burger"); // On récupère le bouton burger
+let menu = document.querySelector("ul.menu") ; // On récupère le menu
+const links = document.querySelectorAll("nav ul.menu li"); // On récupère les li
+
+btnBurger.addEventListener('click', (e => { // On ajoute un écouteur d'event au clic
+    menu.classList.toggle("active"); // Si la classe active n'est pas là, on la rajoute. Si elle est là, on la supprime.
+}));
+
+//Permet de "supprimer"/ranger le menu au clic d'un des liens
+links.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  });
 
   

@@ -1,3 +1,5 @@
+//-----------------------
+// AFFICHAGE DE LA BOISSON SÉLECTIONNÉE
 let btnSelect = document.querySelectorAll("button.select"); //On récupère tous les boutons sélectionner
 let numBtnSlct = btnSelect.length; // Longueur du tableau avec tous les <button>
 
@@ -12,6 +14,8 @@ for (var i = 0; i < numBtnSlct; i++) { //Boucle afin d'ajouter un eventListener
 } 
 
 
+//-----------------------
+//FILTRE SUR LES BOISSONS
 // On vient déclarer des différentes variables :
 
 // Création de nos variables permettant de retrouver mes boutons au clic par leur id
@@ -54,3 +58,21 @@ for (var i = 0; i < numBtnSlct; i++) { //Boucle afin d'ajouter un eventListener
         });
     });
 
+
+//-----------------------
+// NAVBAR
+// Affichage de la navbar au scroll
+var navbar = document.getElementById("navbar"); // On récupère la navbar dans le html
+var sticky = navbar.offsetTop;
+var initScrollpos = 0; // On déclare la position sans scroll (Y = 0)
+window.onscroll = function() { // Instructions lors du scroll 
+    var currentScrollPos = window.scrollY; // On récupère la position Y
+    if (initScrollpos < currentScrollPos) { // Si le Y est plus grand que 0 (c'est-à-dire position sans scroll)
+        navbar.classList.remove("hidden"); // On supprime la class "hidden" pour afficher la navbar
+    } else { // Sinon (Si y = 0, donc s'il n'y a pas de scroll)
+        navbar.classList.add("hidden");  //On rajoute la class "hidden" pour cacher la navbar
+}
+}
+//
+
+  

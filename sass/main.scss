@@ -15,6 +15,49 @@ h2 {
 //---------------
 //HEADER
 header {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; // pour que la navbar passe au-dessus de tous les textes de la page
+    width: 100%;
+    // pour que la navbar soit sticky :
+    position: fixed;
+    top: 0;
+    
+    .logo {
+        color:gray;
+    }
+
+    nav ul li {
+        display: none;
+        margin: 0 5px;
+        color:white;
+        @media screen and (min-width: v.$sm-breakpoint) {
+            display: inline-block;
+        }
+    }
+    button.burger {
+        font-size: 5rem;
+        background-color:transparent;
+        border: none;
+        color:white;
+        @media screen and (min-width: v.$sm-breakpoint) {
+            display: none;
+        }
+    }
+    a, a:hover, a:focus, a:visited {
+        text-decoration: none;
+        color:white;
+    }
+
+}
+
+
+//---------------
+//SECTION BANNER
+#banner {
     position: relative;
     width: 100%;
     display: flex;
@@ -84,7 +127,7 @@ header {
     
 }  
 
-.fa-solid{
+#banner .fa-solid{
    color: white;
 }
 
@@ -414,7 +457,7 @@ footer {
     display: none;
 }
 
-ul {
+#recipes ul {
     list-style: none;
     display: flex;
     width: 100%;

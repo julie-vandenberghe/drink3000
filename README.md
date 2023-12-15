@@ -1,10 +1,10 @@
-# Drink 3000
+# Drink 3000 🍹
 
 Exercice done during M2i training. 
 
 ## Contributors
-@julie-vandenberghe
-@theodanel
+- [@julie-vandenberghe](https://github.com/julie-vandenberghe)
+- [@theodanel](https://github.com/theodanel)
 
 ## Languages used
 - HTML/CSS/Sass

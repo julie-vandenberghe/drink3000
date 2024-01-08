@@ -1,0 +1,76 @@
+@use "variables" as v;
+
+//---------------
+//HEADER
+header {
+    color:white;
+    padding:0 20px;
+    text-transform: uppercase;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100; // pour que la navbar passe au-dessus de tous les textes de la page
+    width: 100%;
+    // pour que la navbar soit sticky :
+    position: fixed;
+    top: 0;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size:2.5rem;
+    }
+
+    nav ul.menu {
+        margin: 0; //Pour reset par défaut la marge sur les ul
+        padding: 0; //Pour reset par défaut la marge sur les ul
+        left: -100%;
+        position: fixed;
+        top: 11%;
+        list-style-type: none;
+        letter-spacing: 2px;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap:20px;
+        width: 100%;
+        text-align: center;
+        display: none;
+        @media screen and (min-width: v.$sm-breakpoint) {
+            position:static;
+            display:flex;
+            flex-direction: row;
+            
+            top: 0;
+            left: 0;
+            margin-top:0;
+        }
+        &.active {
+            left: 0;
+            display:flex;
+            background: rgba(0, 0, 0, 0.5);
+
+        }
+    }
+    
+    li {
+        text-indent: 0;
+        font-weight: bold;
+    }
+    button.burger {
+        font-size: 3rem;
+        background-color:transparent;
+        color:white;
+        padding: 4px 8px;
+        border: gray solid 2px;
+        @media screen and (min-width: v.$sm-breakpoint) {
+            display: none;
+        }
+    }
+    a, a:hover, a:focus, a:visited {
+        text-decoration: none;
+        color:white;
+    }
+
+}

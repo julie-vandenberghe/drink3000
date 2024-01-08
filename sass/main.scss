@@ -1,5 +1,7 @@
 @use "_reset.scss";
 @use "variables" as v;
+@use "_header.scss";
+@use "_footer.scss";
 
 //---------------
 //COMMON
@@ -10,11 +12,13 @@ body {
 h2 {
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1rem;
 }
 
+
 //---------------
-//HEADER
-header {
+//SECTION BANNER
+#banner {
     position: relative;
     width: 100%;
     display: flex;
@@ -84,7 +88,7 @@ header {
     
 }  
 
-.fa-solid{
+#banner .fa-solid{
    color: white;
 }
 
@@ -116,8 +120,6 @@ header {
         width: 100%;
     }
 }
-
-
 
     .references-container {
 
@@ -360,99 +362,28 @@ section#recipes {
     justify-content:space-between;
 }
 
-//---------------
-//FOOTER
-footer {
-    background-color: v.$color-gray;
-    color: white;
-    padding:10px 10px 50px 10px;
-    font-size: 2rem;
-    @media screen and (min-width: v.$sm-breakpoint) {
-        display: flex;
-        gap: 30px;
-    }
-    @media screen and (min-width: v.$md-breakpoint) {
-        padding-left:10%;
-        padding-right:10%;
-        font-size: 1.5rem;
-    }
-    @media screen and (min-width: v.$lg-breakpoint) {
-        padding-left:20%;
-        padding-right:20%;
-    }
-        .form {
-            /*   @media screen and (min-width: v.$sm-breakpoint) { display: flex; */
-            @media screen and (min-width: v.$sm-breakpoint) {
-                flex-basis:50%;
-                gap: 2;
-            }
-            form {
-                .placement{
-                    @media screen and (min-width: v.$sm-breakpoint) {
-                        display:flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        text-align: left;
-                    }
-                    text-align:center; 
-                    padding-bottom:10px;
-                    div {
-                        width: 100%;
-                        &.label {
-                            @media screen and (min-width: v.$sm-breakpoint) {
-                                flex-basis: 30%;
-                            } 
-                        }
-                        &.input input, &.input textarea, &.input select{ 
-                            width: 100%;
-                            border:none;
-                            border-radius:5px;
-                            min-height:40px;
-                           @media screen and (min-width: v.$sm-breakpoint) {
-                                flex-basis: 70%;
-                            }
-                        }
-                    }
-                    
-                    button {
-                        width:100%;
-                        padding:10px;
-                        margin-top:10px;
-                        text-transform: uppercase;
-                        background-color: transparent;
-                        border:none;
-                        color:white;
-                    }
-                }
-            }
-        }
-        .map{
-            @media screen and (min-width: v.$sm-breakpoint) {
-                flex-basis: 50%;
-            }
-
-            iframe {
-                width: 100%;  
-            }
-        }
-        
-    h3 {
-        font-size: 150%;
-        text-align: center;
-    }
-}
-
 .hidden {
     display: none;
 }
 
-ul {
+#recipes ul {
     list-style: none;
     display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 20%;
-    
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0; //Pour reset par défaut la marge sur les ul
+    padding: 0; //Pour reset par défaut la marge sur les ul
+
+    @media screen and (min-width: v.$md-breakpoint) {       
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 20%;
+    }
+    li {
+        margin-top:20px;
+    }
 
     li button {
         

@@ -89,8 +89,22 @@ header {
 }
 
 
+.drinkButtons {
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    @media screen and (min-width: v.$md-breakpoint) {
+        display: flex;
+        width: 100%;
+    }
+}
+
 //---------------
 //SECTION REFERENCES
+
+
+
 #references {
     display: flex;
     flex-direction: column;
@@ -266,6 +280,15 @@ img {
 //SECTION RECIPES
 section#recipes {
 
+    .drinks {
+        @media screen and (min-width: v.$md-breakpoint) {
+            display: flex;
+            width: 100%;
+            
+        }
+    }
+
+
     //CARDS DRINK
     .drink.original {
         background-color: v.$color-original;
@@ -284,6 +307,15 @@ section#recipes {
         padding:10px 20px;
         margin:20px;
         border-radius: 10px;
+
+
+        @media screen and (min-width: v.$md-breakpoint) {
+            display: flex;
+            width: 30%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+        }
         
         .title {
             border-bottom: 1px solid white;
